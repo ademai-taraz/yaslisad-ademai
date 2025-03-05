@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Частный детский центр</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family:'Times New Roman', Times, serif;
+            text-align: center;
+          
+            background: no-repeat;
+            background-color: #ded0b9;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 40px;
+        }
+        .group {
+            width: 190px;
+            text-align: center;
+        }
+        .group img {
+            width: 120px; 
+             
+
+
+            height: 120px;
+            border-radius: 50%;
+            transition: transform 0.5s ease;
+        }
+        .group img:hover {
+            transform: rotate(360deg);
+        }
+        .group h3 {
+            font-size: 16px;
+            margin: 10px 0 5px;
+            color: #000000;
+        }
+        .group p {
+            font-size: 14px;
+            color: gray;
+        }
+        .test h1 {
+            margin-top: 30px;
+            color: #000000;  
+        }
+        body.home{
+       
+           background: url(https://i.pinimg.com/736x/01/c7/a1/01c7a12bf818a2fbb684adef5e3df463.jpg);
+            height: 400px;
+            height: 400px;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #070a0b;
+            margin: 0;
+            padding: 0;
+            background-repeat: no-repeat;
+            background-size:200%;      
+            
+        }
+       
+   
+    
+        body.home p{
+            color: #000000;
+        }
+        .section {
+        
+            padding: 40px 20px;
+            background-color: #070707;
+            background: url(https://i.pinimg.com/736x/2a/17/16/2a1716f1acfb349eb5988865da292e85.jpg);
+color: #000000;
+
+          
+        }
+        .section h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+            
+        }
+        .section p {
+            color: #c9b6b6;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            max-width: 900px;
+            margin: auto;
+          
+        }
+        .gallery img {
+            width: 40%;
+            height: 100px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        .video-play {
+            position: relative;
+        }
+        .video-play img {
+            filter: brightness(70%);
+        }
+        .video-play::after {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 40px;
+            color: rgb(235, 220, 220);
+            background: rgba(186, 105, 105, 0.6);
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            border-radius: 50%;
+            text-align: center;
+            cursor: pointer;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #efe5e5;
+        }
+        .container {
+            display: flex;
+            max-width: 1000px;
+            margin: 50px auto;
+            background: rgb(250, 248, 248);
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .text-section {
+            width: 60%;
+            padding-right: 20px;
+        }
+        .image-section {
+            margin-top: -1000px;
+            width: 10%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        h2 {
+            color: #0f100d;
+        }
+        p {
+            color: #0a0a0a;
+            line-height: 1.6;
+        }
+       
+    </style>
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <body class="home">
+            <p>қ. Тараз, Массив Көктем,<br>2 бұрылыс Н.Абишева18.</p>
+            <p> Байланыс уақыты 8:00 - 18:00 | +7 (747) 898 91 91</p>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="overlay"></div>
+        <div class="content">
+            <h1><br>"Ясли-сад Адемай" </h1>
+            <p></p>
+            <div class="rr">
+                <a href="#" class="cta" onclick="openModal()">Тіркелу үшін </a>
+            </div>
+        </div>
+    </section>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p>Балабақшаға жазылу</p>
+            <p>Байланыс деректеріңізді қалдырыңыз</p>
+            <input type="text" placeholder="Аты-жөн">
+            <input type="tel" placeholder="Телефон *">
+            <input type="email" placeholder="E-mail">
+            <label><input type="checkbox">Деректерді өңдеуге келісемін</label>
+            <button class="submit">Жіберу</button>
+        </div>
+    </div>
+
+
+    <script>
+        function openModal() {
+            document.getElementById('modal').style.display = 'block';
+        }
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+    </script>
+</body>
+
+<body>
+    <div class="container">
+        <div class="task">
+            <img src="5325734910348094516.jpg" alt="Первая задача" >
+            <h2>Болатбекова Алия</h2>
+            <p>директор</p>
+            <div class="steps">
+               
+                <div class="step"><span>01</span>Білім жоғары Тараз мемлекеттік педагогикалық институты.
+                    Мамандығы: Педагогика және психология,  «БІЛІМ» БАКАЛАВРЫ</div>
+                <div class="step"><span>02</span> Шымкент қ. «Маман» оқу өндірістік орталық мекемесі. 
+                    Мамандығы: Мектепке дейінгі оқыту және тәрбиелеу.
+                    Педагогикалық еңбек өтілі: 6 жыл</div>
+            </div>
+        </div>
+
+        <div class="task">
+            <img src="5325734910348094465.jpg" alt="Вторая задача">
+            <h2>Мусаева Бакытжан Сауровна </h2>
+            <p>Қызметі: әдіскер</p>
+            <div class="steps">
+                
+                <div class="step"><span>01</span> Білім: жоғары
+                    Тараз мемлекеттік педагогикалық институты. 
+                    Мамандығы: Мектепке дейінгі оқыту және тәрбиелеу  білім бакалавары         
+                    Педагогикалық еңбек өтілі: 23 жыл                            </div>
+                <div class="step"><span>02</span> Мамандығы: Мектепке дейінгі оқыту және тәрбиелеу  білім бакалавары 
+                    Тараз мемлекеттік педагогикалық институты.                                                             
+                    </div>
+            </div>
+        </div>
+
+       
+        </div>
+    </div>
+
+
+    <div class="test">
+        <h1>Біздің топтар</h1>
+    </div>
+    <div class="container">
+        <div class="group">
+            
+            <img src="5323483110534407419.jpg" alt="Группа 1">
+            <h3>1,5-2жас</h3>
+            <p>балапан тобы</p>
+        </div>
+        <div class="group">
+            <img src="5325734910348094934.jpg" alt="Группа 2">
+            <h3> 2-3жас</h3>
+            <p>ботақан тобы</p>
+        </div>
+        <div class="group">
+            <img src="5325734910348094742.jpg" alt="Группа 3">
+            <h3>3-4жас</h3>
+            <p>еркежан тобы</p>
+        </div>
+        <div class="group">
+            <img src="5325734910348094735.jpg" alt="Группа 4">
+            <h3>4-5жас</h3>
+            <p>айгөлек тобы</p>
+        </div>
+        <div class="group">
+            <img src="5325510012975576874.jpg" alt="Группа 4">
+            <h3>5-6жас</h3>
+            <p>қарлығаш тобы</p>
+
+        </div>
+    </div>
+</div>
+
+    <section class="section">
+        <h1>Экскурсия</h1>
+        <div class="gallery">
+            <img src="5323415039597734298.jpg" alt="Комната">
+            <img src="5323415039597734313.jpg" alt="Дети играют">
+            <img src="5323415039597734315.jpg" alt="Рисование" class="video-play">
+            <img src="5323415039597734310.jpg" alt="Бассейн">
+            <img src="5323415039597734301.jpg" alt="Кубики">
+            <img src="3 Ботақан 1.jpg" alt="Кубики">
+        </div>
+    </section>
+
+    <div class="container">
+        
+    <div class="video-container">
+        <video autoplay loop muted playsinline>
+            <source src="video.mp4" type="video/mp4">
+            Ваш браузер не поддерживает видео.
+        </video>
+    </div>
+
+        <div class="text-section">
+            <h2>Адемай балабақшасы туралы</h2>
+            
+            <p>
+                Адемай балабақшасы 2019 жылы ашылып, балаларға сапалы білім мен тәрбие беруді мақсат еткен мекеме. Біз әр баланың жеке тұлға ретінде дамуына, шығармашылық қабілеттерінің ашылуына және жаңа дағдыларды меңгеруіне жағдай жасаймыз.
+            </p>
+            <img src="5325510012975576867.jpg" width="400px" alt="Дети в детском саду">
+            <p>
+                Біздің тәрбие бағытымыз:
+                Қазақи құндылықтарға негізделген тәрбие – балаларға үлкенді құрметтеу, кішіге ізет көрсету, ұлттық дәстүрлер мен мәдениетті үйретеміз.
+                Зияткерлік даму - ерте жастан баланың ойлау, есте сақтау және логикалық қабілеттерін дамытуға арналған арнайы бағдарламалар.
+                Адемай балабақшасы  сіздің балаңыздың жарқын болашағына бастар жол!
+            </p>
+            <p>
+                Шығармашылық және өнер – сурет салу, қолөнер, ән айту және би сабақтары арқылы балалардың шығармашылық қабілетін дамытамыз.
+                Дене шынықтыру және салауатты өмір салты – күнделікті спорттық жаттығулар, қозғалыс ойындары, денсаулықты нығайтуға арналған шаралар.
+                Біз балалардың қауіпсіз және жайлы ортада тәрбиеленуін қамтамасыз етеміз. Aдемай балабақшасы – сіздің балаңыздың жарқын болашағына бастар жол!
+            </p>
+        </div>
+    </div>
+    </div>
+
+
+
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #988383;
+            margin: 0;
+            padding: 0;
+        }
+
+        .day-schedule {
+            width: 80%;
+            margin: 50px auto;
+            background: rgb(255, 229, 191);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background: url(https://i.pinimg.com/736x/4f/88/7d/4f887ddf1cfbedac42b9d6f4adeb5213.jpg);
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .schedule-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .menu {
+            width: 30%;
+        }
+
+        .menu-item {
+            background: #b8b7b7;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .menu-item:hover, .menu-item.active {
+            background: #f4a742;
+            color: rgb(253, 245, 245);
+        }
+
+        .image-container {
+            width: 65%;
+        }
+
+        .image-container img {
+            width: 70%;
+            border-radius: 10px;
+            display: none;
+        }
+
+        .image-container img.active {
+            display: block;
+        }
+
+
+        @media (max-width: 768px) {
+    .day-schedule {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .schedule-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .menu-item {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .image-container {
+        width: 100%;
+    }
+
+    .image-container img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .day-schedule {
+        margin: 20px auto;
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .menu-item {
+        padding: 10px;
+    }
+}
+    </style>
+
+
+<section class="day-schedule">
+    <h2>Уақытты қалай өткіземіз</h2>
+    <div class="schedule-container">
+        <div class="menu">
+            <div class="menu-item active" onclick="showImage('morning', this)">Таңғы кездесу</div>
+            <div class="menu-item" onclick="showImage('exercise', this)">Жаттығу</div>
+            <div class="menu-item" onclick="showImage('learning', this)">Баланы дамытатын сабақтар</div>
+            <div class="menu-item" onclick="showImage('walk', this)">Таза ауада серуендеу және ойындар</div>
+        </div>
+        <div class="image-container">
+            <img id="morning" class="active" src="5325734910348094590.jpg" alt="Утренняя встреча">
+            <img id="exercise" src="5325734910348094591.jpg" alt="Зарядка">
+            <img id="learning" src="5325734910348094646.jpg" alt="Развивающие занятия">
+            <img id="walk" src="5325734910348094645.jpg" alt="Прогулки и игры">
+        </div>
+    </div>
+</section>
+
+<script>
+    function showImage(id, element) {
+    
+        document.querySelectorAll('.image-container img').forEach(img => img.classList.remove('active'));
+    
+        document.getElementById(id).classList.add('active');
+
+        
+        document.querySelectorAll('.menu-item').forEach(item => item.classList.remove('active'));
+        
+        element.classList.add('active');
+    }
+</script>
+
+
+
+
+    <div class="ff">
+        <h1>Қосымша үйірмелер</h1>
+    </div>
+        <div class="programs">
+            <div class="program">
+                <img src="5325734910348094710.jpg" alt="Рисование">
+                <h2>Логопед</h2>
+               
+            </div>
+            <div class="program">
+                <img src="5330244832167323194 (3).jpg" alt="Развитие речи">
+                <h2>Ағылшын тілі</h2>
+                
+            </div>
+            <div class="program">
+                <img src="5325734910348094753 (1).jpg" alt="Английский язык">
+                <h2>Хореография</h2>
+               
+            </div>
+            <div class="program">
+                <img src="5330244832167323193 (1).jpg" alt="Подготовка к школе">
+                <h2>Тхэквондо</h2>
+             
+            </div>
+            <div class="program">
+                <img src="5325734910348094907.jpg" alt="Рисование">
+                <h2>Музыка сабағы</h2>
+               
+            </div>
+            
+           
+        </div>
+    </div>
+
+
+    
+    <section class="teachers">
+        <h2>Педагогтар:</h2>
+        <div class="carousel">
+            <button class="prev">&#8592;</button>
+            <div class="teacher-card">
+                <img src="5325734910348094829.jpg" alt="Ольга Кузьмина">
+                <div class="info">
+                    <h3>Көбен Гүлшат Қамитқызы</h3>
+                    <p><strong>Еркежан тобы тәрбиешісі</strong></p>
+                    <p>Білім:жоғары</p>
+                   
+                </div>
+            </div>
+            <div class="teacher-card">
+                <img src="5325734910348094922.jpg" alt="Ольга Кузьмина">
+                <div class="info">
+                    <h3>Жуанышова Айнур Тайтулеуовна</h3>
+                    <p><strong>Еркежан тобы тәрбиешісі</strong></p>
+                    <p>Білім:жоғары</p>
+                   
+                </div>
+            </div>
+            <div class="teacher-card">
+                <img src="5325734910348094927.jpg" alt="Ольга Кузьмина">
+                <div class="info">
+                    <h3> Мүсілім Арайлым Заутбекқызы</h3>
+                    <p><strong>Қызметі: Музыка жетекшісі</strong></p>
+                    <p>Білім:жоғары</p>
+                   
+                </div>
+            </div>
+            
+
+            <div class="teacher-card">
+                <img src="5325734910348094777.jpg" alt="Евгения Синцева">
+                <div class="info">
+                    <h3>Дуйсенова Айзада Нурдиллаевна</h3>
+                    <p><strong>Балапан тобы тәрбиешісі</strong></p>
+                    <p>Білім:жоғары</p>
+                  
+                </div>
+            </div>
+            <div class="teacher-card">
+                <img src="5325734910348094796.jpg" alt="Иван Петров">
+                <div class="info">
+                    <h3>Абилкасимова Аксауле Султанбековна</h3>
+                    <p><strong>Қарлығаш тобы тәрбиешісі</strong></p>
+                    <p>Білім:жоғары</p>
+                 
+                </div>
+            </div>
+            <div class="teacher-card">
+                <img src="5325734910348094827.jpg" alt="Анна Смирнова">
+                <div class="info">
+                    <h3>Чимбаева Айнур Турткулбаевна</h3>
+                    <p><strong>Айгөлек тобы тәрбиешісі</strong></p>
+                    <p>Білім:жоғары</p>
+                  
+                </div>
+            </div>
+            <div class="teacher-card">
+                <img src="5328007575112901968.jpg" alt="Дмитрий Васильев">
+                <div class="info">
+                    <h3>Әбдрахман Әсел Ғабитқызы</h3>
+                    <p><strong>Ботақан тобы тәрбиешісі</strong></p>
+                    <p>Білім:жоғары</p>
+                  
+                </div>
+            </div>
+
+            <div class="teacher-card">
+                <img src="5325734910348094942.jpg" alt="Дмитрий Васильев">
+                <div class="info">
+                    <h3>Пирманова Гулмарал Нагашибаевна</h3>
+                    <p><strong>Қызметі: Хореограф</strong></p>
+                    <p>Білім: арнайы орта</p>
+                  
+                </div>
+            </div>
+
+            <div class="teacher-card">
+                <img src="5325734910348094939.jpg" alt="Дмитрий Васильев">
+                <div class="info">
+                    <h3>Токбулатова Салтанат Канышбековна</h3>
+                    <p><strong>Қызметі: медбике</strong></p>
+                    <p>Білім: орташа</p>
+                  
+                </div>
+            </div>
+
+            <div class="teacher-card">
+                <img src="5325734910348094936.jpg" alt="Дмитрий Васильев">
+                <div class="info">
+                    <h3> Маханғалиев Дияс Жеңісұлы</h3>
+                    <p><strong>Қызметі: дене шынықтыру жетекшісі</strong></p>
+                    <p>Білім: жоғары</p>
+                  
+                </div>
+            </div>
+
+
+            <button class="next">&#8594;</button>
+        </div>
+        <div class="dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </section>
+    <script src="script.js"></script>
+
+   
+
+   <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 20px;
+    }
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 10px;
+      
+    }
+    .gallery img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 5px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    }
+</style>
+</head>
+<body>
+    <div class="e">
+<h1>Суреттер бөлімі</h1>
+    </div>
+<div class="gallery">
+
+    <img src="5350599506816793491.jpg" alt="Фото 1">
+    <img src="5350599506816793492 (1).jpg" alt="Фото 2">
+    <img src="5350599506816793493.jpg" alt="Фото 3">
+    <img src="5327761812789259822.jpg" alt="Фото 4" height="300px">
+    <img src="5325734910348094670.jpg" alt="Фото 5">
+    <img src="5325734910348094686.jpg" alt="Фото 6">
+    <img src="5350599506816793494.jpg" alt="Фото 7" height="1000px">
+    <img src="5325734910348094669 (1).jpg" alt="Фото 8">
+    <img src="5325510012975576871.jpg" alt="Фото 9">
+    <img src="5325734910348094683.jpg" alt="Фото 10">
+    <img src="5327761812789259806.jpg" alt="Фото 11">
+    <img src="5327761812789259810.jpg" alt="Фото 12">
+    <img src="5327761812789259827.jpg" alt="Фото 13">
+    <img src="5327761812789259827.jpg" alt="Фото 14">
+    <img src="5327761812789259827.jpg" alt="Фото 15">
+    <img src="5327761812789259823.jpg" alt="Фото 16">
+    <img src=" 5327761812789259833.jpg" alt="Фото 17">
+    <img src="5327761812789259823.jpg" alt="Фото 18">
+    <img src="5327761812789259829.jpg" alt="Фото 19">
+    <img src=" 5327761812789259803.jpg " alt="Фото 20">
+    <img src="5325734910348094934 (1).jpg" alt="Фото 21">
+    <img src="5327761812789259837.jpg" alt="Фото 22">
+    <img src="5327761812789259834.jpg" alt="Фото 23">
+    <img src="5327761812789259837.jpg" alt="Фото 24">
+    <img src=" 5327761812789259803.jpg " alt="Фото 25">
+    <img src="5327761812789259838.jpg" alt="Фото 26">
+    <img src="5327761812789259842.jpg" alt="Фото 27">
+  
+</div>
+
+
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+    }
+    .footer {
+        background-color: #c8e3ea;
+        color: rgb(9, 9, 9);
+        padding: 40px 20px;
+    }
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+    .footer-column {
+        flex: 1;
+        min-width: 250px;
+        margin-bottom: 20px;
+    }
+    .footer-column h3 {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+    .footer-column p, .footer-column a {
+        color: #000000;
+        font-size: 14px;
+        text-decoration: none;
+        display: block;
+        margin-bottom: 8px;
+    }
+    .www{
+        margin-top:30px;
+    }
+    .footer-column a:hover {
+        color: rgb(8, 8, 8);
+    }
+    .footer-bottom {
+        text-align: center;
+        font-size: 14px;
+        color: #000000;
+        margin-top: 30px;
+
+
+    }
+    .aaa{
+        margin-top: 20px;
+    }
+    .qq{
+        margin-top: 20px;
+    }
+    @media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-column {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .footer-bottom {
+        margin-top: 20px;
+    }
+}
+
+    
+</style>
+</head>
+<body>
+
+<footer class="footer">
+<div class="footer-container">
+    <div class="footer-column">
+<div class="www">
+        <h3>ЖШС "Адемай" бөбекжай-бақшасы</h3>
+</div>
+        <p><strong>БИН:</strong> 190440004370</p>
+    </div>
+    <div class="footer-column">
+        <div class="qq">
+      
+        </div>
+        <p><strong>Телефон:</strong> <a href="tel:+77478989191">+7 747 898 9191</a></p>
+        <p><strong>Instagram:</strong> <a href="https://www.instagram.com/yaslisad_ademai" target="_blank">@yaslisad_ademai</a></p>
+    </div>
+    <div class="footer-column">
+        <div class="aaa">
+        <h3>Мекен-жай</h3>
+        </div>
+        <p>Массив Көктем, 2 переулок Н.Абишева 18</p>
+    </div>
+</div>
+<div class="footer-bottom">
+    © 2025 ЖШС "Адемай" бөбекжай-бақшасы. Барлық құқықтар қорғалған.
+</div>
+</footer>
+
+</body>
+</html>
