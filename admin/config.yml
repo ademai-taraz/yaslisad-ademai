@@ -1,0 +1,21 @@
+backend:
+  name: github
+  repo: ademai-taraz/yaslisad-ademai
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+locale: "ru"
+
+collections:
+  - name: "news"
+    label: "Новости детского сада"
+    folder: "news"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Заголовок", name: "title", widget: "string"}
+      - {label: "Дата", name: "date", widget: "datetime"}
+      - {label: "Текст новости", name: "body", widget: "markdown"}
+      - {label: "Фотография", name: "image", widget: "image", required: false}
