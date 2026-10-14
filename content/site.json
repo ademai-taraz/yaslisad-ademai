@@ -11,7 +11,11 @@
   ],
   "news": [],
   "announcements": [],
-  "gallery": [],
+  "gallery": [
+    {
+      "image": "/images/img_0351.jpg"
+    }
+  ],
   "staff": [],
   "groups": []
 }
