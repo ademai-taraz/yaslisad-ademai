@@ -2,20 +2,55 @@ backend:
   name: github
   repo: ademai-taraz/yaslisad-ademai
   branch: main
-
+# GitHub OAuth серверін қосымша орнату қажет; онсыз кіру жұмыс істемейді.
 media_folder: "images"
 public_folder: "/images"
-
 locale: "ru"
-
 collections:
-  - name: "news"
-    label: "Новости детского сада"
-    folder: "news"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - {label: "Заголовок", name: "title", widget: "string"}
-      - {label: "Дата", name: "date", widget: "datetime"}
-      - {label: "Текст новости", name: "body", widget: "markdown"}
-      - {label: "Фотография", name: "image", widget: "image", required: false}
+  - name: "site"
+    label: "Сайтты басқару"
+    files:
+      - name: "content"
+        label: "Барлық бөлімдер"
+        file: "content/site.json"
+        format: "json"
+        fields:
+          - label: "Құжаттар"
+            name: "documents"
+            widget: "list"
+            fields:
+              - {label: "Құжат атауы", name: "title", widget: "string"}
+              - {label: "Файл", name: "file", widget: "file"}
+          - label: "Жаңалықтар"
+            name: "news"
+            widget: "list"
+            fields:
+              - {label: "Тақырып", name: "title", widget: "string"}
+              - {label: "Мәтін", name: "text", widget: "text"}
+              - {label: "Күні", name: "date", widget: "date", required: false}
+              - {label: "Сурет", name: "image", widget: "image", required: false}
+          - label: "Хабарландырулар"
+            name: "announcements"
+            widget: "list"
+            fields:
+              - {label: "Тақырып", name: "title", widget: "string"}
+              - {label: "Мәтін", name: "text", widget: "text"}
+          - label: "Фотогалерея"
+            name: "gallery"
+            widget: "list"
+            fields:
+              - {label: "Сурет", name: "image", widget: "image"}
+              - {label: "Сипаттама", name: "caption", widget: "string", required: false}
+          - label: "Қызметкерлер"
+            name: "staff"
+            widget: "list"
+            fields:
+              - {label: "Аты-жөні", name: "name", widget: "string"}
+              - {label: "Лауазымы", name: "role", widget: "string"}
+              - {label: "Сурет", name: "image", widget: "image", required: false}
+          - label: "Топтар"
+            name: "groups"
+            widget: "list"
+            fields:
+              - {label: "Топ атауы", name: "name", widget: "string"}
+              - {label: "Сипаттама", name: "description", widget: "text", required: false}
