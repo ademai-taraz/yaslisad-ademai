@@ -48,9 +48,24 @@ collections:
               - {label: "Аты-жөні", name: "name", widget: "string"}
               - {label: "Лауазымы", name: "role", widget: "string"}
               - {label: "Сурет", name: "image", widget: "image", required: false}
+              - {label: "Білімі", name: "education", widget: "string", required: false}
           - label: "Топтар"
             name: "groups"
             widget: "list"
             fields:
               - {label: "Топ атауы", name: "name", widget: "string"}
               - {label: "Сипаттама", name: "description", widget: "text", required: false}
+              - {label: "Жас ерекшелігі", name: "age", widget: "string", required: false}
+              - {label: "Сурет", name: "image", widget: "image", required: false}
+          - label: "Экскурсия суреттері"
+            name: "excursion"
+            widget: "list"
+            fields:
+              - {label: "Сурет", name: "image", widget: "image"}
+              - {label: "Сипаттама", name: "caption", widget: "string", required: false}
+          - label: "Қосымша үйірмелер"
+            name: "programs"
+            widget: "list"
+            fields:
+              - {label: "Үйірме атауы", name: "name", widget: "string"}
+              - {label: "Сурет", name: "image", widget: "image", required: false}
